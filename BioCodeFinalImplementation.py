@@ -21,8 +21,8 @@ from keras.utils import np_utils
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
 def preprocess(prot,filename,linepop):
-    f=open(filesPathIp+"\\"+filename+".dssp", "r")
-    contents =f.readlines()
+    with open(filesPathIp+"\\"+filename+".dssp", "r") as f:
+        contents =f.readlines()
     b=[]
     c=[]
     flag=False
